@@ -1,0 +1,173 @@
+.flower {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.petal {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, black, rgb(177, 130, 252), rgb(101, 61, 245));
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+}
+
+.one {
+    transform: rotate(180deg) ;
+}
+
+.two {
+    transform: rotate(270deg) ;
+}
+
+.three {
+    transform: rotate(90deg) ;
+}
+
+.circle {
+    height: 80px;
+    width: 80px;
+    background: radial-gradient(rgb(255, 255, 255), rgb(238, 255, 0));
+    border-radius: 50%;
+    position: absolute;
+ 
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #ff9a9e, #fecfef, #f6a3d9);
+    background-size: 300% 300%;
+    animation: gradientAnimation 6s ease infinite;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+h1 {
+    font-size: 55px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+/* Buttons container */
+.buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  /* Button styles */
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  /* Yes Button */
+  .btn.yes {
+    background: #f6a3d9;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn.yes:hover {
+    background: #ff9a9e;
+    transform: scale(1.1);
+  }
+  
+  /* No Button */
+  .btn.no {
+    background: #fecfef;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn.no:hover {
+    background: #ffcccc;
+    transform: scale(1.1);
+  }
+
+  .btn.yes.enlarged {
+    transform: scale(1.5); /* Make the button 50% larger */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+
+
+  /* Popup styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup.hidden {
+    display: none; /* Hide the popup initially */
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-content p {
+    color: rgb(43, 0, 32);
+    font-size: 20px
+   
+
+  }
+  
+  .popup-content button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: #f6a3d9;
+    color: rgb(43, 0, 32);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .popup-content button:hover {
+    background: #ff9a9e;
+  }
+  
+
+  .top-gif {
+    display: block;
+    margin: 0 auto; /* Center the GIF horizontally */
+    width: 100%; /* Makes the GIF responsive */
+    max-width: 400px; /* Limits the size of the GIF */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin-bottom: 20px; /* Adds space below the GIF */
+  }
